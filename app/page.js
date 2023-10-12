@@ -66,7 +66,7 @@ const handleSaveTodos = (todos)=>{
           </div>
           <div className="todo-list mt-5">
             {
-            todoList !== null && todoList?.length > 0 ? 
+             todoList ? 
             todoList.map(todo =>  <Task todo={todo} handleDeleteTask={handleDeleteTask} handleEditTask={handleEditTask} handleSaveTodos={handleSaveTodos}/>)
             :
             <p className="text-center text-[#ddd] font-normal text-xl pt-3">There are no tasks available!</p>
