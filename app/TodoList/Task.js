@@ -10,7 +10,7 @@ const Task = ({todo, handleDeleteTask, handleEditTask, handleSaveTodos})=>{
     useEffect(() =>{
         // save todos to local storage
        const todosItems =  JSON.parse(localStorage.getItem("todoList"));
-       setTodos(todosItems);
+       todosItems && setTodos(todosItems);
       }, [updateTodo])
 
     const handleFocus = (id) => {

@@ -9,7 +9,7 @@ export default function Home() {
   useEffect(() =>{
     // save todos to local storage
    const todos =  JSON.parse(localStorage.getItem("todoList"));
-   setTodoList(todos);
+   todos && setTodoList(todos);
   }, [])
 
   const handleChange = (e)=>{
